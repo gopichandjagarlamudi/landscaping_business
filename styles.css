@@ -7,12 +7,35 @@
 }
 
 body {
-    color: #222;
+    background-color: #f0f4f8; /* Light blue-gray background for elegance */
+    color: #333; /* Dark gray text for readability */
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #bcc3c9, #a8b4b6); /* Soft gradient background */
+    /*background: linear-gradient(135deg, #bcc3c9, #a8b4b6); /* Soft gradient background */
     overflow-x: hidden;
 }
 
+/* Section Container Styling */
+.section-container {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 20px;
+    border-radius: 10px; /* Smooth, rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Space between sections */
+}
+
+/* Heading Styling */
+h2 {
+    color: #2c3e50; /* Dark slate gray for sophistication */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Body Text Styling */
+p, li {
+    color: #333; /* Dark gray for readability */
+    line-height: 1.6;
+}
 
 .hero-section {
     position: relative;
@@ -78,20 +101,25 @@ body {
 }
 
 .services li {
-    background: #acb1b8;
-    color: #f0faff;
-    padding: 15px;
-    border-radius: 8px;
-    flex: 1 1 250px;
+    background: linear-gradient(135deg, #1b3a57, #2c4e70); /* Subtle gradient for depth */
+    color: #ffffff; /* White text */
+    padding: 12px 24px; /* Increased padding for a larger button */
+    border: 1px solid #1b3a57; /* Thin border matching the background */
+    border-radius: 20px; /* Smoother, rounded corners */
+    font-weight: bold;
     text-align: center;
-    font-weight: bold; /* Makes text bold */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for lift effect */
+    cursor: pointer;
 }
 
 .services li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #2c4e70, #3a5d80); /* Slightly different gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: translateY(-2px); /* Small upward shift on hover for interactivity */
 }
+
+
 
 .gallery-images {
     display: flex;
