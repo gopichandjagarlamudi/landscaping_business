@@ -62,7 +62,9 @@ p, li {
     position: relative;
     z-index: 2;
 }
-
+.hero-section p {
+    color: #ffffff; /* Set text color to white */
+}
 
 
 .hero-section h1 {
