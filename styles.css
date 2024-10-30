@@ -1,0 +1,167 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #222;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #bcc3c9, #a8b4b6); /* Soft gradient background */
+    overflow-x: hidden;
+}
+
+
+.hero-section {
+    position: relative;
+    background: url('johannes-plenio-RwHv7LgeC7s-unsplash.jpg') center center / cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    background-attachment: fixed;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for darkness */
+    z-index: 1;
+}
+
+/* Ensure the text is above the overlay */
+.hero-section h1, .hero-section p {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+}
+
+.about-us, .services, .gallery, .contact-form {
+    padding: 60px 20px;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85); /* Light overlay */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px); /* Adds a nice blur effect */
+    animation: fadeIn 1.2s ease-in-out; /* Smooth fade-in effect */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.services ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.services li {
+    background: #acb1b8;
+    color: #f0faff;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1 1 250px;
+    text-align: center;
+    font-weight: bold; /* Makes text bold */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-images img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+input, textarea, select, button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #357ab8;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #50575f;
+    outline: none;
+    box-shadow: 0 0 8px rgba(27, 58, 87, 0.2);
+}
+
+button {
+    background: linear-gradient(135deg, #50575f, #46596e);
+    color: #f0faff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #50575f, #46596e);
+    transform: scale(1.05);
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .gallery-images img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-section {
+        padding: 50px 15px;
+    }
+
+    .about-us, .services, .gallery, .contact-form {
+        padding: 30px 15px;
+    }
+}
